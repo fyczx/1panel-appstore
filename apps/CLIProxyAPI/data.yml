@@ -1,0 +1,27 @@
+additionalProperties:
+  key: CLIProxyAPI    #应用的 key ，仅限英文，用于在 Linux 创建文件夹
+  name: CLI 代理 API   #应用名称
+  tags:
+    - Tool #应用标签，可以有多个，请参照下方的标签列表
+  shortDescZh: 为 CLI 提供 OpenAI/Gemini/Claude/Codex 兼容的代理 API
+  shortDescEn: CLI proxy API for OpenAI/Gemini/Claude/Codex compatible endpoints
+  type: tool  #应用类型，区别于应用分类，只能有一个，请参照下方的类型列表
+  crossVersionUpdate: true   #是否可以跨大版本升级
+  limit: 1 #应用安装数量限制，0 代表无限制
+  website: https://help.router-for.me/cn/introduction/quick-start.html  #官网地址
+  github: https://github.com/router-for-me/CLIProxyAPI  #github 地址
+  description:
+    en: |
+      CLIProxyAPI provides a local proxy API compatible with OpenAI/Gemini/Claude/Codex endpoints.
+      It supports OAuth integrations, multi-account routing, streaming, function calls, and optional
+      upstream provider routing (e.g. OpenRouter). Useful for local CLI clients and multi-account setups.
+    zh: |
+      CLIProxyAPI 提供与 OpenAI/Gemini/Claude/Codex 兼容的本地代理 API，支持 OAuth、
+      多账户轮询、流式响应、函数调用和上游路由配置，适合在本地或私有环境为 CLI 客户端
+      提供统一的代理接口。
+    zh-Hant:
+    ja:
+    ms:
+    pt-br:
+    ru:
+    ko:

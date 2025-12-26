@@ -1,0 +1,16 @@
+version: '3.8'
+
+services:
+	cli-proxy-api:
+		image: ${CLI_PROXY_IMAGE:-eceasy/cli-proxy-api:latest}
+		container_name: cli-proxy-api
+		restart: unless-stopped
+		ports:
+			- "${PANEL_APP_PORT_HTTP}:8317"
+		volumes:
+			- ./config.yaml:/CLIProxyAPI/config.yaml
+			- ./auths:/root/.cli-proxy-api
+			- ./logs:/CLIProxyAPI/logs
+		environment:
+			- DEPLOY=${DEPLOY:-}
+		# 如需自定义镜像或版本，请设置环境变量 CLI_PROXY_IMAGE

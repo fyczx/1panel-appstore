@@ -1,0 +1,16 @@
+version: "3.8"
+
+services:
+	flatnas:
+		image: qdnas/flatnas:latest
+		container_name: flatnas
+		restart: unless-stopped
+		ports:
+			- "${PANEL_APP_PORT_HTTP}:3000"
+		volumes:
+			- ./data:/app/server/data
+			- ./doc:/app/server/doc
+			- ./music:/app/server/music
+			- ./PC:/app/server/PC
+			- ./APP:/app/server/APP
+			- /var/run/docker.sock:/var/run/docker.sock

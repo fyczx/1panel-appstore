@@ -1,0 +1,31 @@
+additionalProperties:
+  key: decotv    # 应用的 key ，仅限英文，用于在 Linux 创建文件夹
+  name: DecoTV   # 应用名称
+  tags:
+    - Media
+    - Streaming
+    - Tool
+  shortDescZh: 开箱即用的影视聚合播放器（需自行配置播放源）
+  shortDescEn: Out-of-box media aggregator/player (requires custom data sources)
+  type: tool  # 应用类型
+  crossVersionUpdate: true   # 是否可以跨大版本升级
+  limit: 0  # 应用安装数量限制，0 代表无限制
+  website: https://github.com/Decohererk/DecoTV
+  github: https://github.com/Decohererk/DecoTV
+  description:
+    en: |
+      DecoTV is a Next.js-based media aggregator and player. It provides multi-source search, HLS playback
+      (ArtPlayer/HLS.js), bookmarks, continue-watching, and optional user registration. The project ships
+      as a minimal/empty shell — you must configure external data sources (APIs) in the admin panel after
+      deployment.
+    zh: |
+      DecoTV 是一个基于 Next.js 的影视聚合播放器，支持多源搜索、HLS 播放、收藏与观看记录、
+      多种存储后端（kvrocks/redis/upstash）和可选的用户注册功能。部署后需要在管理后台
+      填入播放源/接口配置，项目本身不包含任何播放源。
+    zh-Hant: |
+      DecoTV 是一個基於 Next.js 的影視聚合播放器，部署後需要自行配置播放源。
+    ja: ""
+    ms: ""
+    pt-br: ""
+    ru: ""
+    ko: ""
