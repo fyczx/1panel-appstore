@@ -1,0 +1,28 @@
+additionalProperties:
+  key: flatnas    # 应用的 key ，仅限英文，用于在 Linux 创建文件夹
+  name: FlatNas   # 应用名称
+  tags:
+    - Dashboard
+    - NAS
+    - Tool
+  shortDescZh: 轻量级可定制的个人导航页与仪表盘系统
+  shortDescEn: Lightweight customizable personal dashboard and navigation page
+  type: tool
+  crossVersionUpdate: true
+  limit: 0
+  website: https://flatnas.top/
+  github: https://github.com/Garry-QD/FlatNas
+  description:
+    en: |
+      FlatNas is a lightweight, customizable personal dashboard (Vue 3 + Express) aimed at NAS users
+      and developers. It includes widgets, a file-transfer helper, bookmark manager, and optional Docker
+      deployment. The project recommends mounting data and media directories to persist user data.
+    zh: |
+      FlatNas 是一个轻量、可定制的个人导航页与仪表盘系统，基于 Vue3 与 Express 构建。包含多种
+      小组件（文件传输、书签、播放器等），支持 Docker 与一键部署，数据应挂载到宿主目录以保证持久化。
+    zh-Hant: ""
+    ja: ""
+    ms: ""
+    pt-br: ""
+    ru: ""
+    ko: ""

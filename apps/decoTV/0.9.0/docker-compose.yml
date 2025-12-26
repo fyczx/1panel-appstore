@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+	decotv-core:
+		image: ghcr.io/decohererk/decotv:latest
+		container_name: decotv-core
+		restart: on-failure
+		ports:
+			- "${PANEL_APP_PORT_HTTP}:3000"
+		environment:
+			- USERNAME=admin
+			- PASSWORD=admin_password
+			- NEXT_PUBLIC_STORAGE_TYPE=kvrocks
+			- KVROCKS_URL=redis://decotv-kvrocks:6666

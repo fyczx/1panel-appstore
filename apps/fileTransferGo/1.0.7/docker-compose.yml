@@ -1,0 +1,12 @@
+version: '3.8'
+
+services:
+	file-transfer-go:
+		image: matrixseven/file-transfer-go:latest
+		container_name: file-transfer-go
+		restart: unless-stopped
+		ports:
+			- "${PANEL_APP_PORT_HTTP}:8080"
+		environment:
+			- NODE_ENV=production
+		# 如需自定义后端地址或 TURN/STUN，添加相应环境变量（参见上游 README）

@@ -1,0 +1,29 @@
+additionalProperties:
+  key: file-transfer-go    # 应用的 key ，仅限英文，用于在 Linux 创建文件夹
+  name: File Transfer Go   # 应用名称
+  tags:
+    - Tool
+    - FileTransfer
+    - P2P
+  shortDescZh: 基于 WebRTC 的 P2P 文件传输、文字传输与桌面共享
+  shortDescEn: P2P file/clipboard transfer and desktop sharing using WebRTC
+  type: tool
+  crossVersionUpdate: true
+  limit: 0
+  website: https://transfer.52python.cn/
+  github: https://github.com/MatrixSeven/file-transfer-go
+  description:
+    en: |
+      File Transfer Go is a WebRTC-based P2P file transfer and desktop sharing project (Go backend +
+      Next.js frontend). It supports end-to-end encryption, multi-file transfers, text transfer, and
+      optional TURN/STUN configuration for NAT traversal. Docker compose and single-binary deployments
+      are supported.
+    zh: |
+      文件快传是一个基于 WebRTC 的 P2P 文件/文字传输与桌面共享工具，后端使用 Go，前端使用
+      Next.js。项目提供 Docker 部署与一键构建脚本，支持 TURN/STUN、端到端加密与多文件断点续传。
+    zh-Hant: ""
+    ja: ""
+    ms: ""
+    pt-br: ""
+    ru: ""
+    ko: ""
