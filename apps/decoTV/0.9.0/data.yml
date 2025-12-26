@@ -20,7 +20,7 @@ additionalProperties:
 
     # 管理员账号
     - default: admin
-      envKey: MOONTV_ADMIN_USER
+      envKey: DECOTV_ADMIN_USER
       labelEn: Admin Username
       labelZh: 管理员用户名
       label:
@@ -37,7 +37,7 @@ additionalProperties:
 
     # 管理员密码
     - default: "password"
-      envKey: MOONTV_ADMIN_PASSWORD
+      envKey: DECOTV_ADMIN_PASSWORD
       labelEn: Admin Password
       labelZh: 管理员密码
       label:
@@ -55,7 +55,7 @@ additionalProperties:
 
     # 是否开启注册
     - default: 启用
-      envKey: MOONTV_ENABLE_REGISTER
+      envKey: DECOTV_ENABLE_REGISTER
       required: true
       type: select
       label:
@@ -74,8 +74,8 @@ additionalProperties:
           value: "false"
 
     # 站点名称
-    - default: MoonTV
-      envKey: MOONTV_SITE_NAME
+    - default: DECOTV
+      envKey: DECOTV_SITE_NAME
       labelEn: Site Name
       labelZh: 站点名称
       label:
@@ -92,7 +92,7 @@ additionalProperties:
 
     # 站点公告
     - default: 本网站仅提供影视信息搜索服务，所有内容均来自第三方网站。本站不存储任何视频资源，不对任何内容的准确性、合法性、完整性负责。
-      envKey: MOONTV_ANNOUNCEMENT
+      envKey: DECOTV_ANNOUNCEMENT
       labelEn: Announcement
       labelZh: 站点公告
       label:
@@ -109,7 +109,7 @@ additionalProperties:
 
     # 存储类型选择
     - default: Upstash
-      envKey: MOONTV_STORAGE_TYPE
+      envKey: DECOTV_STORAGE_TYPE
       labelEn: Storage Type
       labelZh: 存储类型
       label:
@@ -148,7 +148,7 @@ additionalProperties:
       required: false
       type: text
       dependsOn:
-        envKey: MOONTV_STORAGE_TYPE
+        envKey: DECOTV_STORAGE_TYPE
         value: kvrocks
 
     # Redis URL（可选）
@@ -168,7 +168,7 @@ additionalProperties:
       required: false
       type: text
       dependsOn:
-        envKey: MOONTV_STORAGE_TYPE
+        envKey: DECOTV_STORAGE_TYPE
         value: redis
 
     # Upstash URL（可选）
@@ -188,5 +188,5 @@ additionalProperties:
       required: false
       type: text
       dependsOn:
-        envKey: MOONTV_STORAGE_TYPE
+        envKey: DECOTV_STORAGE_TYPE
         value: Upstash
