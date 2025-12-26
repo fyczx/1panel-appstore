@@ -2,7 +2,7 @@ version: '3.8'
 
 services:
   cli-proxy-api:
-    image: ${CLI_PROXY_IMAGE_REPO:-eceasy/cli-proxy-api}:${CLI_PROXY_IMAGE_TAG:-latest}
+    image: eceasy/cli-proxy-api:latest
     container_name: ${CONTAINER_NAME}
     restart: always
     networks:
