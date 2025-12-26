@@ -2,7 +2,7 @@ name: Update app version in Renovate Branches
 
 on:
   push:
-    branches: [ 'renovate/*' ]
+    分支: [ 'renovate/*' ]
   workflow_dispatch:
     inputs:
       manual-trigger:
@@ -20,8 +20,8 @@ jobs:
 
       - name: Configure git
         run: |
-          git config --local user.email "githubaction@githubaction.com"
-          git config --local user.name "github-action update-app-version"
+          git config --local user.email "fuyunyuxue@gmail.com"
+          git config --local user.name "fyczx"
 
       - name: Get list of updated files by the last commit
         id: updated-files
