@@ -1,27 +1,50 @@
 additionalProperties:
-  key: CLIProxyAPI    #应用的 key ，仅限英文，用于在 Linux 创建文件夹
-  name: CLI 代理 API   #应用名称
+  key: cliproxyapi
+  name: CLIProxyAPI
   tags:
-    - Tool #应用标签，可以有多个，请参照下方的标签列表
-  shortDescZh: 为 CLI 提供 OpenAI/Gemini/Claude/Codex 兼容的代理 API
-  shortDescEn: CLI proxy API for OpenAI/Gemini/Claude/Codex compatible endpoints
-  type: tool  #应用类型，区别于应用分类，只能有一个，请参照下方的类型列表
-  crossVersionUpdate: true   #是否可以跨大版本升级
-  limit: 1 #应用安装数量限制，0 代表无限制
-  website: https://help.router-for.me/cn/introduction/quick-start.html  #官网地址
-  github: https://github.com/router-for-me/CLIProxyAPI  #github 地址
+    - Tool
+    - Server
+  shortDescZh: OpenAI/Gemini/Claude 兼容的本地代理 API 服务
+  shortDescEn: Local proxy API compatible with OpenAI/Gemini/Claude
+  type: tool
+  crossVersionUpdate: true
+  limit: 0
+  website: https://github.com/router-for-me/CLIProxyAPI
+  github: https://github.com/router-for-me/CLIProxyAPI
   description:
     en: |
-      CLIProxyAPI provides a local proxy API compatible with OpenAI/Gemini/Claude/Codex endpoints.
-      It supports OAuth integrations, multi-account routing, streaming, function calls, and optional
-      upstream provider routing (e.g. OpenRouter). Useful for local CLI clients and multi-account setups.
+      CLIProxyAPI is a proxy server that provides OpenAI/Gemini/Claude/Codex compatible API interfaces for CLI tools and IDEs.
+
+      Key Features:
+      - Compatible with OpenAI, Gemini, Claude, and Codex API endpoints
+      - Support for OAuth login (Claude Code, Codex, Qwen Code, iFlow)
+      - Streaming and non-streaming responses
+      - Function calling/tools support
+      - Multimodal input support (text and images)
+      - Multiple accounts with round-robin load balancing
+      - Simple CLI authentication flows
+      - Amp CLI and IDE extensions support with provider routing
+
+      The management API is localhost-only for security.
     zh: |
-      CLIProxyAPI 提供与 OpenAI/Gemini/Claude/Codex 兼容的本地代理 API，支持 OAuth、
-      多账户轮询、流式响应、函数调用和上游路由配置，适合在本地或私有环境为 CLI 客户端
-      提供统一的代理接口。
-    zh-Hant:
-    ja:
-    ms:
-    pt-br:
-    ru:
-    ko:
+      CLIProxyAPI 是一个代理服务器，为 CLI 工具和 IDE 提供与 OpenAI/Gemini/Claude/Codex 兼容的 API 接口。
+
+      主要特性：
+      - 兼容 OpenAI、Gemini、Claude 和 Codex API 端点
+      - 支持 OAuth 登录（Claude Code、Codex、Qwen Code、iFlow）
+      - 流式和非流式响应
+      - 函数调用/工具支持
+      - 多模态输入支持（文本和图片）
+      - 多账户轮询负载均衡
+      - 简单的 CLI 身份验证流程
+      - Amp CLI 和 IDE 扩展支持与提供商路由
+
+      管理 API 仅限本地访问以确保安全。
+    zh-Hant: |
+      CLIProxyAPI 是一個代理服務器，為 CLI 工具和 IDE 提供與 OpenAI/Gemini/Claude/Codex 兼容的 API 接口。
+      支持 OAuth 登錄、多賬戶輪詢、流式響應和函數調用等功能。
+    ja: ""
+    ms: ""
+    pt-br: ""
+    ru: ""
+    ko: ""

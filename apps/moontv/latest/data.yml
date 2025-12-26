@@ -108,7 +108,7 @@ additionalProperties:
       type: text
 
     # 存储类型选择
-    - default: kvrocks
+    - default: Upstash
       envKey: MOONTV_STORAGE_TYPE
       labelEn: Storage Type
       labelZh: 存储类型
@@ -128,6 +128,8 @@ additionalProperties:
           value: kvrocks
         - label: redis
           value: redis
+        - label: Upstash
+          value: Upstash
 
     # Kvrocks URL（可选）
     - default: ""
@@ -168,3 +170,23 @@ additionalProperties:
       dependsOn:
         envKey: MOONTV_STORAGE_TYPE
         value: redis
+
+    # Upstash URL（可选）
+    - default: ""
+      envKey: UPSTASH_CONNECT_URL
+      labelEn: Upstash URL
+      labelZh: Upstash 连接 URL
+      label:
+        en: Upstash URL
+        ja: Upstash 接続 URL
+        ms: Upstash URL Sambungan
+        pt-br: URL Upstash
+        ru: URL подключения Upstash
+        ko: Upstash URL
+        zh: Upstash 连接 URL
+        zh-Hant: Upstash 連接 URL
+      required: false
+      type: text
+      dependsOn:
+        envKey: MOONTV_STORAGE_TYPE
+        value: Upstash

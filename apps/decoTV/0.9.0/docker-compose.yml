@@ -1,14 +1,29 @@
 version: '3.8'
 
 services:
-	decotv-core:
-		image: ghcr.io/decohererk/decotv:latest
-		container_name: decotv-core
-		restart: on-failure
-		ports:
-			- "${PANEL_APP_PORT_HTTP}:3000"
-		environment:
-			- USERNAME=admin
-			- PASSWORD=admin_password
-			- NEXT_PUBLIC_STORAGE_TYPE=kvrocks
-			- KVROCKS_URL=redis://decotv-kvrocks:6666
+  decotv-core:
+    image: ghcr.io/decohererk/decotv:latest
+    container_name: ${CONTAINER_NAME}
+    restart: always
+    networks:
+      - 1panel-network
+    labels:
+      createdBy: "Apps"
+    ports:
+      - ${PANEL_APP_PORT_HTTP}:3000
+    volumes:
+      - ./data:/app/data
+    environment:
+      USERNAME: ${DECOTV_ADMIN_USER}
+      PASSWORD: ${DECOTV_ADMIN_PASSWORD}
+      NEXT_PUBLIC_STORAGE_TYPE: ${DECOTV_STORAGE_TYPE}
+      KVROCKS_URL: ${KVROCKS_CONNECT_URL}
+      REDIS_URL: ${REDIS_CONNECT_URL}
+      UPSTASH_URL: ${UPSTASH_CONNECT_URL}
+      NEXT_PUBLIC_ENABLE_REGISTER: ${DECOTV_ENABLE_REGISTER}
+      NEXT_PUBLIC_SITE_NAME: ${DECOTV_SITE_NAME}
+      ANNOUNCEMENT: ${DECOTV_ANNOUNCEMENT}
+
+networks:
+  1panel-network:
+    external: true

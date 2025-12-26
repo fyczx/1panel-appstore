@@ -1,9 +1,45 @@
 additionalProperties:
   formFields:
+    - default: 8317
       edit: true
       envKey: PANEL_APP_PORT_HTTP
-      labelEn: Port
-      labelZh: 端口
+      label:
+        en: API Port
+        zh: API 端口
+        zh-Hant: API 連接埠
+        ja: API ポート
+        ms: Port API
+        pt-br: Porta da API
+        ru: Порт API
+        ko: API 포트
       required: true
       rule: paramPort
       type: number
+    - default: eceasy/cli-proxy-api
+      edit: true
+      envKey: CLI_PROXY_IMAGE_REPO
+      label:
+        en: Image Repository
+        zh: 镜像仓库
+        zh-Hant: 鏡像倉庫
+        ja: イメージリポジトリ
+        ms: Repositori Gambar
+        pt-br: Repositório de Imagem
+        ru: Репозиторий образов
+        ko: 이미지 저장소
+      required: false
+      type: text
+    - default: latest
+      edit: true
+      envKey: CLI_PROXY_IMAGE_TAG
+      label:
+        en: Image Tag
+        zh: 镜像标签
+        zh-Hant: 鏡像標籤
+        ja: イメージタグ
+        ms: Tag Gambar
+        pt-br: Tag da Imagem
+        ru: Тег образа
+        ko: 이미지 태그
+      required: false
+      type: text
